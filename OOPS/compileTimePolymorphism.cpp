@@ -62,7 +62,7 @@ Complex operator + (const Complex &B)
 bool operator == (const Complex &B)
 {
     // this point A instance
-   return (this->real ==B.real) && (this->imag == B.imag)
+   return (this->real ==B.real) && (this->imag == B.imag);
 }
 
     void print()
