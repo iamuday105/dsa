@@ -1,10 +1,15 @@
-https://leetcode.com/problems/basic-calculator/
+// https://leetcode.com/problems/basic-calculator/
 
 
 
-class Solution
-{
-public:
+// class Solution
+// {
+// public:
+
+#include<iostream>
+#include<stack>
+using namespace std;
+
     int calculate(string s)
     {
         stack<int> st;
@@ -14,6 +19,7 @@ public:
 
         for (char ch : s)
         {
+        //  if(isdigit(ch)){
             if (ch >= '0' && ch <= '9')
                 num = num * 10 + (ch - '0');
             else if (ch == '+')
@@ -58,4 +64,10 @@ public:
         result += sign * num; // add the last number to result.
         return result;
     }
+int main(){
+    string s = "(1+(4+5+2)-3)+(6+8)";
+   int ans = calculate(s);
+   cout<<"ans is : "<<ans;
+
+    return 0;
 };
